@@ -2,7 +2,6 @@ module.exports = (gulp) ->
 
   gulp.task 'watch', ->
     gulp.watch [
-      'src/*.coffee'
-    ], [
-      'spec'
-    ]
+      'src/**/*.coffee'
+    ], ['specs']
+    return
