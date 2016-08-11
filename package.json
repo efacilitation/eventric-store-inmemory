@@ -1,10 +1,11 @@
 {
   "name": "eventric-store-inmemory",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "eventric inmemory store adapter",
   "main": "build/src/inmemory_store.js",
   "scripts": {
-    "test": "gulp specs"
+    "test": "gulp specs",
+    "prepublish": "gulp build"
   },
   "repository": {
     "type": "git",
