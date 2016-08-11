@@ -1,6 +1,6 @@
 {
   "name": "eventric-store-inmemory",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "eventric inmemory store adapter",
   "main": "build/src/inmemory_store.js",
   "scripts": {
