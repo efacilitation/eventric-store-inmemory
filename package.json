@@ -1,0 +1,34 @@
+{
+  "name": "eventric-store-inmemory",
+  "version": "0.1.0",
+  "description": "eventric inmemory store adapter",
+  "main": "build/src/inmemory_store.js",
+  "scripts": {
+    "test": "gulp specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efacilitation/eventric-store-inmemory.git"
+  },
+  "keywords": [
+    "eventric",
+    "eventric-store",
+    "inmemory"
+  ],
+  "devDependencies": {
+    "del": "2.2.1",
+    "eventric-store-specs": "1.1.0",
+    "gulp": "3.9.1",
+    "gulp-coffee": "2.3.2",
+    "gulp-exit": "0.0.2",
+    "gulp-util": "3.0.7",
+    "gulp-mocha": "3.0.0",
+    "run-sequence": "1.2.2"
+  },
+  "author": "efa-GmbH <team@efa-gmbh.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/efacilitation/eventric-store-inmemory/issues"
+  },
+  "homepage": "https://github.com/efacilitation/eventric-store-inmemory#readme"
+}
