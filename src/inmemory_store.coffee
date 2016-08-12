@@ -1,10 +1,13 @@
 # TODO: Remove callback everywhere
 
 class InMemoryStore
+  # TODO: Make domainEventSequence private but allow to request it to access the store directly if needed
+  domainEventSequence:
+    currentDomainEventId: 1
+
 
   constructor: ->
     @_domainEvents = []
-    @_domainEventIdCounter = 1
 
 
   initialize: (@_context) ->
@@ -16,7 +19,7 @@ class InMemoryStore
   saveDomainEvent: (domainEvent) ->
     new Promise (resolve) =>
       # TODO: we should not modify input arguments in order to keep the code side effects free
-      domainEvent.id = @_domainEventIdCounter++
+      domainEvent.id = @domainEventSequence.currentDomainEventId++
       @_domainEvents.push domainEvent
       resolve domainEvent
 
@@ -41,6 +44,10 @@ class InMemoryStore
     domainEvents = @_domainEvents.filter (domainEvent) ->
       domainEventNames.indexOf(domainEvent.name) > -1 and aggregateIds.indexOf(domainEvent.aggregate.id) > -1
     callback null, domainEvents
+
+
+  destroy: ->
+    return Promise.resolve()
 
 
 module.exports = InMemoryStore
